@@ -13,12 +13,20 @@ namespace trriandle
         public double a;
         public double b;
         public double c;
+        public double h;
 
         public triangle(int A, int B, int C) 
         {
             a = A;
             b = B;
             c = C;
+        }
+        public triangle(int A, int B, int C, int H)
+        {
+            a = A;
+            b = B;
+            c = C;
+            h = H;
         }
         public string outPutA()
         {
@@ -31,6 +39,10 @@ namespace trriandle
         public string outPutC()
         {
             return Convert.ToString(c);
+        }
+        public string outPutH()
+        {
+            return Convert.ToString(h);
         }
         public double Peremeter() 
         {
