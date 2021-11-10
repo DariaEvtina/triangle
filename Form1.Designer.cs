@@ -46,6 +46,7 @@
             // run_button
             // 
             this.run_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.run_button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.run_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.run_button.FlatAppearance.BorderSize = 10;
             this.run_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -72,6 +73,7 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.valdkonnas,
             this.väärtus});
+            this.listView1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.listView1.Location = new System.Drawing.Point(13, 13);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(288, 296);
@@ -113,6 +115,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.label1.Font = new System.Drawing.Font("Noto Sans Hebrew", 9.749999F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(148, 317);
             this.label1.Name = "label1";
@@ -124,6 +127,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.No;
             this.label2.Font = new System.Drawing.Font("Noto Sans Hebrew", 9.749999F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(148, 343);
             this.label2.Name = "label2";
@@ -134,6 +138,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Help;
             this.label3.Font = new System.Drawing.Font("Noto Sans Hebrew", 9.749999F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(148, 369);
             this.label3.Name = "label3";
