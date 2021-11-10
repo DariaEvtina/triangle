@@ -109,12 +109,12 @@ namespace trriandle
         {
             get
             {
-                if (( b==c) && (a==b) && (c==a))
+                if ((b == c) && (a == b) && (c == a))
                     return "kolmnurk on võrdkülgne";
 
-                else if ((b==c)|| (c==a)||(b==a))
+                else if ((b == c) || (c == a) || (b == a))
                     return "kolmnurk on võrdhaarne";
-                else return "kolmnurk ei ole võrdkülgne ja ei ole võrdhaarne"
+                else return "kolmnurk on mitmekülgne";
             }
         }
     }
