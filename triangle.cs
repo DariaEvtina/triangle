@@ -85,6 +85,11 @@ namespace trriandle
             get { return b; }
             set { b = value; }
         }
+        public double GetSetH
+        {
+            get { return h; }
+            set { h = value; }
+        }
         public double GetSetC
         {
             get{ return c; }
@@ -98,6 +103,18 @@ namespace trriandle
                 return false;
 
                 else  return true; 
+            }
+        }
+        public string Triangletype
+        {
+            get
+            {
+                if (( b==c) && (a==b) && (c==a))
+                    return "kolmnurk on võrdkülgne";
+
+                else if ((b==c)|| (c==a)||(b==a))
+                    return "kolmnurk on võrdhaarne";
+                else return "kolmnurk ei ole võrdkülgne ja ei ole võrdhaarne"
             }
         }
     }
