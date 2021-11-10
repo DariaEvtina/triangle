@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Office2013.PowerPoint.Roaming;
+using Google.Protobuf.WellKnownTypes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,28 +46,22 @@ namespace trriandle
             s = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
             return s;
         }
-        public double GetSetA()
+        public double GetSetA
         {
-            get
-            { return a; }
-            set
-            { a = Value; }
+            get{ return a; }
+            set{ a = value; }
         }
-        public double GetSetB()
+        public double GetSetB
         {
-            get
-            { return b; }
-            set
-            { b = Value; }
+            get { return b; }
+            set { b = value; }
         }
-        public double GetSetC()
+        public double GetSetC
         {
-            get
-            { return c; }
-            set
-            { c = Value; }
+            get{ return c; }
+            set{ c = value; }
         }
-        public bool ExistTriangle()
+        public bool ExistTriangle
         {
             get
             {
