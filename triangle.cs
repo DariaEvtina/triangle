@@ -15,18 +15,16 @@ namespace trriandle
         public double c;
         public double h;
 
-        public triangle(int A, int B, int C) 
+        public triangle(double A, double B, double C) 
         {
             a = A;
             b = B;
             c = C;
         }
-        public triangle(int A, int B, int C, int H)
+        public triangle( double H, double A)
         {
-            a = A;
-            b = B;
-            c = C;
             h = H;
+            a = A;
         }
         public string outPutA()
         {
@@ -50,12 +48,31 @@ namespace trriandle
             p = a + b + c;
             return p;
         }
+        public double Half_perimeter()
+        {
+            double pm = Peremeter();
+            double halfp = pm / 2;
+            return halfp;
+        }
+        public double triangleheight() 
+        {
+            double s = Surface();
+            double h = 0;
+            h = (2 * s) / a;
+            return h;
+
+        }
         public double Surface() 
         {
-            double p = 0;
+            double p = Half_perimeter();
             double s = 0;
-            p = (a + b + c) / 2;
             s = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
+            return s;
+        }
+        public double SurfaceAH()
+        {
+            double s = 0;
+            s = ((1/2)*a)*h;
             return s;
         }
         public double GetSetA
