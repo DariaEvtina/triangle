@@ -60,9 +60,9 @@ namespace trriandle
         }
         public double GetSetC()
         {
-            get;
+            get
             { return c; }
-            set;
+            set
             { c = Value; }
         }
         public bool ExistTriangle()
