@@ -27,7 +27,7 @@ namespace trriandle
             listView1.Items.Add("pool a:");
             listView1.Items.Add("pool b:");
             listView1.Items.Add("pool c:");
-            listView1.Items.Add("ümbermõõt:");
+            listView1.Items.Add("perimeetri:");
             listView1.Items.Add("Ruut:");
             listView1.Items.Add("on olemas?:");
             listView1.Items.Add("täpsustaja");
@@ -38,6 +38,22 @@ namespace trriandle
             listView1.Items[4].SubItems.Add(Convert.ToString(triangle.Surface()));
             if (triangle.ExistTriangle) { listView1.Items[5].SubItems.Add("olemas"); }
             else { listView1.Items[5].SubItems.Add("ei ole"); }
+            listView1.Items[6].SubItems.Add(triangle.Triangletype);
+            if (triangle.ExistTriangle == true)
+            {
+                if (triangle.Triangletype == "võrdkülgne")
+                {
+                    pictureBox1.Image = Properties.Resources.a_triangle;
+                }
+                else if (triangle.Triangletype == "võrdhaarne")
+                {
+                    pictureBox1.Image = Properties.Resources.a_triangles;
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.a_triangles2;
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -48,6 +64,12 @@ namespace trriandle
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            omeWorm frm = new omeWorm();
+            frm.Show();
         }
     }
 }

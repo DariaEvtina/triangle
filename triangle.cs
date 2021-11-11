@@ -44,8 +44,7 @@ namespace trriandle
         }
         public double Peremeter() 
         {
-            double p = 0;
-            p = a + b + c;
+            double p = a + b + c;
             return p;
         }
         public double Half_perimeter()
@@ -57,16 +56,14 @@ namespace trriandle
         public double triangleheight() 
         {
             double s = Surface();
-            double h = 0;
-            h = (2 * s) / a;
+            double h = (2 * s )/ a;
             return h;
 
         }
         public double Surface() 
         {
             double p = Half_perimeter();
-            double s = 0;
-            s = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
+            double s = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
             return s;
         }
         public double SurfaceAH()
@@ -99,22 +96,27 @@ namespace trriandle
         {
             get
             {
-                if ((a > b + c) && (b > a + c) && (c > a + b))
-                return false;
+                if ((a >( b + c)) && (b > (a + c)) && (c > (a + b)))
+                    return false;
+                else if ((a<1)||(b<1)||(c<1))
+                    return false;
 
-                else  return true; 
+                else return true;
+
             }
         }
         public string Triangletype
-        {
+        { 
             get
             {
                 if ((b == c) && (a == b) && (c == a))
-                    return "kolmnurk on võrdkülgne";
+                    return "võrdkülgne";
+                else if (ExistTriangle != true)
+                    return "nan";
 
                 else if ((b == c) || (c == a) || (b == a))
-                    return "kolmnurk on võrdhaarne";
-                else return "kolmnurk on mitmekülgne";
+                    return "võrdhaarne";
+                else return "mitmekülgne";
             }
         }
     }
