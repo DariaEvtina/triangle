@@ -15,13 +15,20 @@ namespace trriandle
         public double c;
         public double h;
 
-        public triangle(double A, double B, double C) 
+        public triangle(double A, double B, double C)
         {
             a = A;
             b = B;
             c = C;
         }
-        public triangle( double H, double A)
+        public triangle(double A, double B, double C, double H)
+        {
+            a = A;
+            b = B;
+            c = C;
+            h = H;
+        }
+        public triangle(double H, double A)
         {
             h = H;
             a = A;
@@ -42,7 +49,7 @@ namespace trriandle
         {
             return Convert.ToString(h);
         }
-        public double Peremeter() 
+        public double Peremeter()
         {
             double p = a + b + c;
             return p;
@@ -53,14 +60,14 @@ namespace trriandle
             double halfp = pm / 2;
             return halfp;
         }
-        public double triangleheight() 
+        public double triangleheight()
         {
             double s = Surface();
-            double h = (2 * s )/ a;
+            double h = (2 * s) / a;
             return h;
 
         }
-        public double Surface() 
+        public double Surface()
         {
             double p = Half_perimeter();
             double s = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
@@ -68,14 +75,23 @@ namespace trriandle
         }
         public double SurfaceAH()
         {
-            double s = 0;
-            s = ((1/2)*a)*h;
+            double s = (a / 2) * h;
             return s;
+        }
+        public double findC()
+        {
+            double c = Math.Sqrt(Math.Pow(a,2)+Math.Pow(h,2));
+            return c;
+        }
+        public double findB()
+        {
+            double b = Math.Sqrt(Math.Pow(a, 2) + Math.Pow(h, 2));
+            return b;
         }
         public double GetSetA
         {
-            get{ return a; }
-            set{ a = value; }
+            get { return a; }
+            set { a = value; }
         }
         public double GetSetB
         {
@@ -89,18 +105,19 @@ namespace trriandle
         }
         public double GetSetC
         {
-            get{ return c; }
-            set{ c = value; }
+            get { return c; }
+            set { c = value; }
         }
         public bool ExistTriangle
         {
             get
             {
-                if ((a >( b + c)) && (b > (a + c)) && (c > (a + b)))
+                if ((a > (b + c)) && (b > (a + c)) && (c > (a + b)))
                     return false;
-                else if ((a<1)||(b<1)||(c<1))
+                else if ((a < 1) || (b < 1) || (c < 1))
                     return false;
-
+                else if((a > (findB() + findC())) && (findB() > (a + findC())) && (findC() > (a + findB())))
+                    return false;
                 else return true;
 
             }
@@ -112,10 +129,22 @@ namespace trriandle
                 if ((b == c) && (a == b) && (c == a))
                     return "võrdkülgne";
                 else if (ExistTriangle != true)
-                    return "nan";
-
+                    return "katkendlik joon";
                 else if ((b == c) || (c == a) || (b == a))
                     return "võrdhaarne";
+                else return "mitmekülgne";
+            }
+        }
+        public string TriangletypeHA
+        {
+            get
+            {
+                if (a%2==0)
+                    return "võrdhaarne";
+                else if((findC()==a)&&(findB()==a)&&(findB()==findC()))
+                    return "võrdkülgne";
+                else if (ExistTriangle != true)
+                    return "katkendlik joon";
                 else return "mitmekülgne";
             }
         }

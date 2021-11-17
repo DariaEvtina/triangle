@@ -41,6 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,9 +51,9 @@
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.form,
             this.value});
-            this.listView1.Location = new System.Drawing.Point(13, 13);
+            this.listView1.Location = new System.Drawing.Point(13, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(262, 301);
+            this.listView1.Size = new System.Drawing.Size(323, 302);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -59,22 +61,23 @@
             // form
             // 
             this.form.Text = "Läheskonnas";
-            this.form.Width = 128;
+            this.form.Width = 138;
             // 
             // value
             // 
             this.value.Text = "Vääritus";
-            this.value.Width = 129;
+            this.value.Width = 174;
             // 
             // run_butt
             // 
             this.run_butt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.run_butt.Font = new System.Drawing.Font("Segoe MDL2 Assets", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.run_butt.Location = new System.Drawing.Point(312, 228);
+            this.run_butt.Location = new System.Drawing.Point(342, 259);
             this.run_butt.Name = "run_butt";
-            this.run_butt.Size = new System.Drawing.Size(150, 45);
+            this.run_butt.Size = new System.Drawing.Size(150, 55);
             this.run_butt.TabIndex = 1;
             this.run_butt.Text = "start";
+            this.run_butt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.run_butt.UseVisualStyleBackColor = true;
             this.run_butt.Click += new System.EventHandler(this.run_butt_Click);
             // 
@@ -153,18 +156,44 @@
             // pictureBox1
             // 
             this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(300, 279);
+            this.pictureBox1.Location = new System.Drawing.Point(323, 321);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(173, 140);
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.ChangeUICues += new System.Windows.Forms.UICuesEventHandler(this.pictureBox1_ChangeUICues);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label5.Font = new System.Drawing.Font("Rubik", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.label5.Location = new System.Drawing.Point(0, 474);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(438, 18);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "kui kõrgus või mis tahes teine ​​pool pole teada, sisestage 0";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.button1.Location = new System.Drawing.Point(342, 112);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 53);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Back";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // omeWorm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(485, 492);
+            this.ClientSize = new System.Drawing.Size(508, 492);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -178,6 +207,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "omeWorm";
             this.Text = "omeWorm";
+            this.Load += new System.EventHandler(this.omeWorm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,5 +229,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }

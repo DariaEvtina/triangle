@@ -28,11 +28,13 @@ namespace trriandle
 
         private void run_butt_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
             double a, b, c, h;
-            a = Convert.ToDouble(txtbox1.Text);
-            b = Convert.ToDouble(txtbox2.Text);
-            c = Convert.ToDouble(txtbox3.Text);
-            h = Convert.ToDouble(txtbox4.Text);
+
+                a = Convert.ToDouble(txtbox1.Text);
+                b = Convert.ToDouble(txtbox2.Text);
+                c = Convert.ToDouble(txtbox3.Text);
+                h = Convert.ToDouble(txtbox4.Text);
             if (h==0)
             {
                 triangle triangle = new triangle(a, b, c);
@@ -48,7 +50,7 @@ namespace trriandle
                 listView1.Items[0].SubItems.Add(triangle.outPutA());
                 listView1.Items[1].SubItems.Add(triangle.outPutB());
                 listView1.Items[2].SubItems.Add(triangle.outPutC());
-
+                listView1.Items[3].SubItems.Add(triangle.outPutH());
                 listView1.Items[4].SubItems.Add(Convert.ToString(triangle.Peremeter()));
                 listView1.Items[5].SubItems.Add(Convert.ToString(triangle.Half_perimeter()));
                 listView1.Items[6].SubItems.Add(Convert.ToString(triangle.Surface()));
@@ -76,6 +78,50 @@ namespace trriandle
                     pictureBox1.Image = Properties.Resources.nan;
                 }
             }
+            else if ((h!=0)&&(a!=0)&&(b!=0)&&(c!=0))
+            {
+                triangle triangle = new triangle(a, b, c, h);
+                listView1.Items.Add("pool a:");
+                listView1.Items.Add("pool b:");
+                listView1.Items.Add("pool c:");
+                listView1.Items.Add("kõrgem:");
+                listView1.Items.Add("perimeetrit:");
+                listView1.Items.Add("pool perimeetrit");
+                listView1.Items.Add("Ruut:");
+                listView1.Items.Add("on olemas?:");
+                listView1.Items.Add("täpsustaja");
+                listView1.Items[0].SubItems.Add(triangle.outPutA());
+                listView1.Items[1].SubItems.Add(triangle.outPutB());
+                listView1.Items[2].SubItems.Add(triangle.outPutC());
+                listView1.Items[3].SubItems.Add(triangle.outPutH());
+                listView1.Items[4].SubItems.Add(Convert.ToString(triangle.Peremeter()));
+                listView1.Items[5].SubItems.Add(Convert.ToString(triangle.Half_perimeter()));
+                listView1.Items[6].SubItems.Add(Convert.ToString(triangle.Surface()));
+
+                if (triangle.ExistTriangle) { listView1.Items[7].SubItems.Add("olemas"); }
+                else { listView1.Items[7].SubItems.Add("ei ole"); }
+                listView1.Items[8].SubItems.Add(triangle.Triangletype);
+                if (triangle.ExistTriangle == true)
+                {
+                    if (triangle.Triangletype == "võrdkülgne")
+                    {
+                        pictureBox1.Image = Properties.Resources.a_triangle;
+                    }
+                    else if (triangle.Triangletype == "võrdhaarne")
+                    {
+                        pictureBox1.Image = Properties.Resources.a_triangles;
+                    }
+                    else
+                    {
+                        pictureBox1.Image = Properties.Resources.a_triangles2;
+                    }
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.nan;
+                }
+
+            }
             else
             {
                 triangle triangle = new triangle(a,h);
@@ -89,8 +135,32 @@ namespace trriandle
                 listView1.Items.Add("on olemas?:");
                 listView1.Items.Add("täpsustaja");
                 listView1.Items[0].SubItems.Add(triangle.outPutA());
+                listView1.Items[1].SubItems.Add(triangle.outPutB());
+                listView1.Items[2].SubItems.Add(triangle.outPutC());
                 listView1.Items[3].SubItems.Add(triangle.outPutH());
                 listView1.Items[6].SubItems.Add(Convert.ToString(triangle.SurfaceAH()));
+                if (triangle.ExistTriangle) { listView1.Items[7].SubItems.Add("olemas"); }
+                else { listView1.Items[7].SubItems.Add("ei ole"); }
+                listView1.Items[8].SubItems.Add(triangle.Triangletype);
+                if (triangle.ExistTriangle == true)
+                {
+                    if (triangle.Triangletype == "võrdkülgne")
+                    {
+                        pictureBox1.Image = Properties.Resources.a_triangle;
+                    }
+                    else if (triangle.Triangletype == "võrdhaarne")
+                    {
+                        pictureBox1.Image = Properties.Resources.a_triangles;
+                    }
+                    else
+                    {
+                        pictureBox1.Image = Properties.Resources.a_triangles2;
+                    }
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.nan;
+                }
             }
         }
 
@@ -107,6 +177,23 @@ namespace trriandle
         private void pictureBox1_ChangeUICues(object sender, UICuesEventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void omeWorm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+            this.Hide();
         }
     }
 }

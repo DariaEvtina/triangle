@@ -70,6 +70,7 @@ namespace trriandle
         {
             omeWorm frm = new omeWorm();
             frm.Show();
+            this.Hide();
         }
     }
 }
