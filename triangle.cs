@@ -112,11 +112,9 @@ namespace trriandle
         {
             get
             {
-                if (a < (b + c) && b < (a + c) && c < (a + b))
+                if (a > (b + c) && b > (a + c) && c > (a + b))
                     return false;
                 else if ((a < 1) || (b < 1) || (c < 1))
-                    return false;
-                else if((a > (findB() + findC())) && (findB() > (a + findC())) && (findC() > (a + findB())))
                     return false;
                 else return true;
 

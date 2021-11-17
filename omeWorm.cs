@@ -67,6 +67,10 @@ namespace trriandle
                     {
                         pictureBox1.Image = Properties.Resources.a_triangles;
                     }
+                    else if (triangle.Triangletype == "täisnurkne")
+                    {
+                        pictureBox1.Image = Properties.Resources.a_triangle90;
+                    }
                     else
                     {
                         pictureBox1.Image = Properties.Resources.a_triangles2;
@@ -76,6 +80,7 @@ namespace trriandle
                 {
                     pictureBox1.Image = Properties.Resources.nan;
                 }
+
             }
             else if ((h!=0)&&(a!=0)&&(b!=0)&&(c!=0))
             {
