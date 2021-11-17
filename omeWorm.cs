@@ -30,7 +30,6 @@ namespace trriandle
         {
             listView1.Items.Clear();
             double a, b, c, h;
-
                 a = Convert.ToDouble(txtbox1.Text);
                 b = Convert.ToDouble(txtbox2.Text);
                 c = Convert.ToDouble(txtbox3.Text);
@@ -110,6 +109,10 @@ namespace trriandle
                     else if (triangle.Triangletype == "võrdhaarne")
                     {
                         pictureBox1.Image = Properties.Resources.a_triangles;
+                    }
+                    else if (triangle.Triangletype == "täisnurkne")
+                    {
+                        pictureBox1.Image = Properties.Resources.a_triangle90;
                     }
                     else
                     {
@@ -194,6 +197,11 @@ namespace trriandle
             Form1 frm = new Form1();
             frm.Show();
             this.Hide();
+        }
+
+        private void txtbox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

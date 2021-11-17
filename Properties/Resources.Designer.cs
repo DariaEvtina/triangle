@@ -73,6 +73,16 @@ namespace trriandle.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap a_triangle90 {
+            get {
+                object obj = ResourceManager.GetObject("a_triangle90", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap a_triangles {
             get {
                 object obj = ResourceManager.GetObject("a_triangles", resourceCulture);

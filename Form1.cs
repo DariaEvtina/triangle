@@ -72,5 +72,10 @@ namespace trriandle
             frm.Show();
             this.Hide();
         }
+
+        private void txtA_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

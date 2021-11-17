@@ -40,9 +40,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,6 +87,7 @@
             this.txtbox1.Name = "txtbox1";
             this.txtbox1.Size = new System.Drawing.Size(126, 20);
             this.txtbox1.TabIndex = 2;
+            this.txtbox1.TextChanged += new System.EventHandler(this.txtbox1_TextChanged);
             // 
             // txtbox2
             // 
@@ -153,16 +154,6 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "kõrge:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(323, 321);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(173, 140);
-            this.pictureBox1.TabIndex = 10;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.ChangeUICues += new System.Windows.Forms.UICuesEventHandler(this.pictureBox1_ChangeUICues);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -186,6 +177,16 @@
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Location = new System.Drawing.Point(323, 321);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(173, 140);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.ChangeUICues += new System.Windows.Forms.UICuesEventHandler(this.pictureBox1_ChangeUICues);
             // 
             // omeWorm
             // 

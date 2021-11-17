@@ -128,6 +128,8 @@ namespace trriandle
             {
                 if ((b == c) && (a == b) && (c == a))
                     return "võrdkülgne";
+                else if ((a == h) || (b == h) || (c == h))
+                    return "täisnurkne";
                 else if (ExistTriangle != true)
                     return "katkendlik joon";
                 else if ((b == c) || (c == a) || (b == a))
