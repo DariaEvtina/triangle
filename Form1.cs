@@ -68,7 +68,7 @@ namespace trriandle
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            omeWorm frm = new omeWorm();
+            omaWorm frm = new omaWorm();
             frm.Show();
             this.Hide();
         }

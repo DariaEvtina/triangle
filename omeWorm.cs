@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace trriandle
 {
-    public partial class omeWorm : Form
+    public partial class omaWorm : Form
     {
-        public omeWorm()
+        public omaWorm()
         {
             InitializeComponent();
         }
@@ -187,6 +187,11 @@ namespace trriandle
         }
 
         private void txtbox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
