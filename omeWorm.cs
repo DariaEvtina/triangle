@@ -145,8 +145,6 @@ namespace trriandle
                 listView1.Items[1].SubItems.Add(triangle.outPutB());
                 listView1.Items[2].SubItems.Add(triangle.outPutC());
                 listView1.Items[3].SubItems.Add(triangle.outPutH());
-                listView1.Items[4].SubItems.Add(Convert.ToString(triangle.Peremeter()));
-                listView1.Items[5].SubItems.Add(Convert.ToString(triangle.Half_perimeter()));
                 listView1.Items[6].SubItems.Add(Convert.ToString(triangle.Surface()));
 
                 if (triangle.ExistTriangle) { listView1.Items[7].SubItems.Add("olemas"); }
