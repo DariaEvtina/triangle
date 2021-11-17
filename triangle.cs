@@ -128,8 +128,6 @@ namespace trriandle
                     return "võrdkülgne";
                 else if (b == h)
                     return "täisnurkne";
-                else if ((findC() == a) && (findB() == a) && (findB() == findC()))
-                     return "võrdkülgne";
                 else if (ExistTriangle != true)
                     return "katkendlik joon";
                 else if ((b == c) || (c == a) || (b == a))
