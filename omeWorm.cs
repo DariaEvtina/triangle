@@ -34,7 +34,7 @@ namespace trriandle
                 b = Convert.ToDouble(numericUpDown2.Text);
                 c = Convert.ToDouble(numericUpDown3.Text);
                 h = Convert.ToDouble(numericUpDown4.Text);
-            if (h==0)
+            if (h == 0)
             {
                 triangle triangle = new triangle(a, b, c);
                 listView1.Items.Add("pool a:");
@@ -80,9 +80,8 @@ namespace trriandle
                 {
                     pictureBox1.Image = Properties.Resources.nan;
                 }
-
             }
-            else if ((h!=0)&&(a!=0)&&(b!=0)&&(c!=0))
+            else if ((h != 0) && (a != 0) && (b != 0) && (c != 0))
             {
                 triangle triangle = new triangle(a, b, c, h);
                 listView1.Items.Add("pool a:");
@@ -128,11 +127,10 @@ namespace trriandle
                 {
                     pictureBox1.Image = Properties.Resources.nan;
                 }
-
             }
             else
             {
-                triangle triangle = new triangle(a,h);
+                triangle triangle = new triangle(a, h);
                 listView1.Items.Add("pool a:");
                 listView1.Items.Add("pool b:");
                 listView1.Items.Add("pool c:");
@@ -146,7 +144,10 @@ namespace trriandle
                 listView1.Items[1].SubItems.Add(triangle.outPutB());
                 listView1.Items[2].SubItems.Add(triangle.outPutC());
                 listView1.Items[3].SubItems.Add(triangle.outPutH());
-                listView1.Items[6].SubItems.Add(Convert.ToString(triangle.SurfaceAH()));
+                listView1.Items[4].SubItems.Add(Convert.ToString(triangle.Peremeter()));
+                listView1.Items[5].SubItems.Add(Convert.ToString(triangle.Half_perimeter()));
+                listView1.Items[6].SubItems.Add(Convert.ToString(triangle.Surface()));
+
                 if (triangle.ExistTriangle) { listView1.Items[7].SubItems.Add("olemas"); }
                 else { listView1.Items[7].SubItems.Add("ei ole"); }
                 listView1.Items[8].SubItems.Add(triangle.Triangletype);
@@ -174,6 +175,10 @@ namespace trriandle
                     pictureBox1.Image = Properties.Resources.nan;
                 }
             }
+            
+
+            
+            
         }
 
         private void txtbox2_TextChanged(object sender, EventArgs e)
