@@ -34,6 +34,7 @@ namespace trriandle
                 b = Convert.ToDouble(numericUpDown2.Text);
                 c = Convert.ToDouble(numericUpDown3.Text);
                 h = Convert.ToDouble(numericUpDown4.Text);
+            
             if (h == 0)
             {
                 triangle triangle = new triangle(a, b, c);

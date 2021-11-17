@@ -84,7 +84,7 @@
             this.run_butt.Name = "run_butt";
             this.run_butt.Size = new System.Drawing.Size(150, 55);
             this.run_butt.TabIndex = 1;
-            this.run_butt.Text = "start";
+            this.run_butt.Text = "Alusta";
             this.run_butt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.run_butt.UseVisualStyleBackColor = false;
             this.run_butt.Click += new System.EventHandler(this.run_butt_Click);
@@ -152,7 +152,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 53);
             this.button1.TabIndex = 12;
-            this.button1.Text = "Back";
+            this.button1.Text = "tagasi";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
