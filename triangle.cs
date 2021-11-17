@@ -126,7 +126,7 @@ namespace trriandle
             {
                 if ((b == c) && (a == b) && (c == a))
                     return "võrdkülgne";
-                else if ((a == h) || (b == h) || (c == h))
+                else if ((b == h) || (c == h))
                     return "täisnurkne";
                 else if ((findC() == a) && (findB() == a) && (findB() == findC()))
                      return "võrdkülgne";
