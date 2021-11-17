@@ -147,32 +147,6 @@ namespace trriandle
                 listView1.Items[3].SubItems.Add(triangle.outPutH());
                 listView1.Items[6].SubItems.Add(Convert.ToString(triangle.Surface()));
 
-                if (triangle.ExistTriangle) { listView1.Items[7].SubItems.Add("olemas"); }
-                else { listView1.Items[7].SubItems.Add("ei ole"); }
-                listView1.Items[8].SubItems.Add(triangle.Triangletype);
-                if (triangle.ExistTriangle == true)
-                {
-                    if (triangle.Triangletype == "võrdkülgne")
-                    {
-                        pictureBox1.Image = Properties.Resources.a_triangle;
-                    }
-                    else if (triangle.Triangletype == "võrdhaarne")
-                    {
-                        pictureBox1.Image = Properties.Resources.a_triangles;
-                    }
-                    else if (triangle.Triangletype == "täisnurkne")
-                    {
-                        pictureBox1.Image = Properties.Resources.a_triangle90;
-                    }
-                    else
-                    {
-                        pictureBox1.Image = Properties.Resources.a_triangles2;
-                    }
-                }
-                else
-                {
-                    pictureBox1.Image = Properties.Resources.nan;
-                }
             }
             
 
