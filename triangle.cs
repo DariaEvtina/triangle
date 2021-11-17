@@ -80,7 +80,7 @@ namespace trriandle
         }
         public double findC()
         {
-            double c = Math.Sqrt(Math.Pow(a,2)+Math.Pow(h,2));
+            double c = Math.Sqrt(Math.Pow(a,2) + Math.Pow(h,2));
             return c;
         }
         public double findB()
@@ -112,7 +112,7 @@ namespace trriandle
         {
             get
             {
-                if ((a > (b + c)) && (b > (a + c)) && (c > (a + b)))
+                if (a < (b + c) && b < (a + c) && c < (a + b))
                     return false;
                 else if ((a < 1) || (b < 1) || (c < 1))
                     return false;
@@ -130,8 +130,6 @@ namespace trriandle
                     return "võrdkülgne";
                 else if ((a == h) || (b == h) || (c == h))
                     return "täisnurkne";
-                else if (a % 2 == 0) 
-                    return "võrdhaarne";
                 else if ((findC() == a) && (findB() == a) && (findB() == findC()))
                      return "võrdkülgne";
                 else if (ExistTriangle != true)

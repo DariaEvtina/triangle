@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(omeWorm));
             this.listView1 = new System.Windows.Forms.ListView();
             this.form = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.value = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,9 +53,11 @@
             // 
             // listView1
             // 
+            this.listView1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.form,
             this.value});
+            this.listView1.ForeColor = System.Drawing.SystemColors.Highlight;
             this.listView1.Location = new System.Drawing.Point(13, 12);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(323, 302);
@@ -74,6 +77,7 @@
             // 
             // run_butt
             // 
+            this.run_butt.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.run_butt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.run_butt.Font = new System.Drawing.Font("Segoe MDL2 Assets", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.run_butt.Location = new System.Drawing.Point(342, 259);
@@ -82,7 +86,7 @@
             this.run_butt.TabIndex = 1;
             this.run_butt.Text = "start";
             this.run_butt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.run_butt.UseVisualStyleBackColor = true;
+            this.run_butt.UseVisualStyleBackColor = false;
             this.run_butt.Click += new System.EventHandler(this.run_butt_Click);
             // 
             // label1
@@ -140,18 +144,21 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.button1.Location = new System.Drawing.Point(342, 112);
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Location = new System.Drawing.Point(342, 191);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 53);
             this.button1.TabIndex = 12;
             this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox1.ErrorImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(323, 321);
             this.pictureBox1.Name = "pictureBox1";
@@ -162,6 +169,8 @@
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.numericUpDown1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.numericUpDown1.Location = new System.Drawing.Point(140, 320);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
@@ -169,6 +178,8 @@
             // 
             // numericUpDown2
             // 
+            this.numericUpDown2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.numericUpDown2.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.numericUpDown2.Location = new System.Drawing.Point(140, 348);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
@@ -176,6 +187,8 @@
             // 
             // numericUpDown3
             // 
+            this.numericUpDown3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.numericUpDown3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.numericUpDown3.Location = new System.Drawing.Point(140, 373);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
@@ -183,6 +196,8 @@
             // 
             // numericUpDown4
             // 
+            this.numericUpDown4.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.numericUpDown4.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.numericUpDown4.Location = new System.Drawing.Point(140, 401);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
@@ -192,6 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.InactiveBorder;
             this.ClientSize = new System.Drawing.Size(508, 492);
             this.Controls.Add(this.numericUpDown4);
             this.Controls.Add(this.numericUpDown3);
@@ -206,6 +222,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.run_butt);
             this.Controls.Add(this.listView1);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "omeWorm";
             this.Text = "omeWorm";
             this.Load += new System.EventHandler(this.omeWorm_Load);
