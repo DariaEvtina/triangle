@@ -32,10 +32,6 @@
             this.form = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.value = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.run_butt = new System.Windows.Forms.Button();
-            this.txtbox1 = new System.Windows.Forms.TextBox();
-            this.txtbox2 = new System.Windows.Forms.TextBox();
-            this.txtbox3 = new System.Windows.Forms.TextBox();
-            this.txtbox4 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +39,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             this.SuspendLayout();
             // 
             // listView1
@@ -80,38 +84,6 @@
             this.run_butt.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.run_butt.UseVisualStyleBackColor = true;
             this.run_butt.Click += new System.EventHandler(this.run_butt_Click);
-            // 
-            // txtbox1
-            // 
-            this.txtbox1.Location = new System.Drawing.Point(149, 321);
-            this.txtbox1.Name = "txtbox1";
-            this.txtbox1.Size = new System.Drawing.Size(126, 20);
-            this.txtbox1.TabIndex = 2;
-            this.txtbox1.TextChanged += new System.EventHandler(this.txtbox1_TextChanged);
-            // 
-            // txtbox2
-            // 
-            this.txtbox2.Location = new System.Drawing.Point(149, 347);
-            this.txtbox2.Name = "txtbox2";
-            this.txtbox2.Size = new System.Drawing.Size(126, 20);
-            this.txtbox2.TabIndex = 3;
-            this.txtbox2.TextChanged += new System.EventHandler(this.txtbox2_TextChanged);
-            // 
-            // txtbox3
-            // 
-            this.txtbox3.Location = new System.Drawing.Point(149, 373);
-            this.txtbox3.Name = "txtbox3";
-            this.txtbox3.Size = new System.Drawing.Size(126, 20);
-            this.txtbox3.TabIndex = 4;
-            this.txtbox3.TextChanged += new System.EventHandler(this.txtbox3_TextChanged);
-            // 
-            // txtbox4
-            // 
-            this.txtbox4.Location = new System.Drawing.Point(149, 399);
-            this.txtbox4.Name = "txtbox4";
-            this.txtbox4.Size = new System.Drawing.Size(126, 20);
-            this.txtbox4.TabIndex = 5;
-            this.txtbox4.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -188,11 +160,43 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.ChangeUICues += new System.Windows.Forms.UICuesEventHandler(this.pictureBox1_ChangeUICues);
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(140, 320);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 13;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(140, 348);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.TabIndex = 14;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(140, 373);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown3.TabIndex = 15;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Location = new System.Drawing.Point(140, 401);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown4.TabIndex = 16;
+            // 
             // omeWorm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 492);
+            this.Controls.Add(this.numericUpDown4);
+            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
@@ -200,16 +204,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtbox4);
-            this.Controls.Add(this.txtbox3);
-            this.Controls.Add(this.txtbox2);
-            this.Controls.Add(this.txtbox1);
             this.Controls.Add(this.run_butt);
             this.Controls.Add(this.listView1);
             this.Name = "omeWorm";
             this.Text = "omeWorm";
             this.Load += new System.EventHandler(this.omeWorm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,10 +225,6 @@
         private System.Windows.Forms.ColumnHeader form;
         private System.Windows.Forms.ColumnHeader value;
         private System.Windows.Forms.Button run_butt;
-        private System.Windows.Forms.TextBox txtbox1;
-        private System.Windows.Forms.TextBox txtbox2;
-        private System.Windows.Forms.TextBox txtbox3;
-        private System.Windows.Forms.TextBox txtbox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -232,5 +232,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericUpDown4;
     }
 }

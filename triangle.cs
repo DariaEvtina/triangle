@@ -130,23 +130,14 @@ namespace trriandle
                     return "võrdkülgne";
                 else if ((a == h) || (b == h) || (c == h))
                     return "täisnurkne";
+                else if (a % 2 == 0) 
+                    return "võrdhaarne";
+                else if ((findC() == a) && (findB() == a) && (findB() == findC()))
+                     return "võrdkülgne";
                 else if (ExistTriangle != true)
                     return "katkendlik joon";
                 else if ((b == c) || (c == a) || (b == a))
                     return "võrdhaarne";
-                else return "mitmekülgne";
-            }
-        }
-        public string TriangletypeHA
-        {
-            get
-            {
-                if (a%2==0)
-                    return "võrdhaarne";
-                else if((findC()==a)&&(findB()==a)&&(findB()==findC()))
-                    return "võrdkülgne";
-                else if (ExistTriangle != true)
-                    return "katkendlik joon";
                 else return "mitmekülgne";
             }
         }
